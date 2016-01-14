@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <error-page>
+	<error-code>404</error-code>
+	<location>/page/error.jsp</location>
+  </error-page>
+  
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.mcmusic.utils.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>LoadMusicFilter</filter-name>
+    <filter-class>com.mcmusic.utils.LoadMusicFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoadMusicFilter</filter-name>
+    <url-pattern>/page/musicbox.jsp</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>LoadUserSendFilter</filter-name>
+    <filter-class>com.mcmusic.utils.LoadUserSendFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoadUserSendFilter</filter-name>
+    <url-pattern>/QueryUserSendServlet</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckCodeServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.CheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckNameServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.CheckNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangePicServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.ChangePicServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangeInfoServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.ChangeInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangePswServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.ChangePswServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangeMailServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.ChangeMailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadMusicServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.UploadMusicServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryUsersendListServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.QueryUsersendListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryUserSendServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.QueryUserSendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>NewUserSendServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.NewUserSendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>HasUserSendServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.HasUserSendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddUserlikeServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.AddUserlikeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryAllmusicServlet</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.QueryAllmusicServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryAllmusicByType</servlet-name>
+    <servlet-class>com.mcmusic.userservlet.QueryAllmusicByType</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckCodeServlet</servlet-name>
+    <url-pattern>/CheckCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckNameServlet</servlet-name>
+    <url-pattern>/CheckNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePicServlet</servlet-name>
+    <url-pattern>/ChangePicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeInfoServlet</servlet-name>
+    <url-pattern>/ChangeInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePswServlet</servlet-name>
+    <url-pattern>/ChangePswServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeMailServlet</servlet-name>
+    <url-pattern>/ChangeMailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadMusicServlet</servlet-name>
+    <url-pattern>/UploadMusicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryUsersendListServlet</servlet-name>
+    <url-pattern>/QueryUsersendListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryUserSendServlet</servlet-name>
+    <url-pattern>/QueryUserSendServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewUserSendServlet</servlet-name>
+    <url-pattern>/NewUserSendServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HasUserSendServlet</servlet-name>
+    <url-pattern>/HasUserSendServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddUserlikeServlet</servlet-name>
+    <url-pattern>/AddUserlikeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryAllmusicServlet</servlet-name>
+    <url-pattern>/QueryAllmusicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryAllmusicByType</servlet-name>
+    <url-pattern>/QueryAllmusicByType</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
