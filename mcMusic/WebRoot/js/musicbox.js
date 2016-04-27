@@ -128,7 +128,7 @@
 			//点击音量键静音
 			$(".r_control .c_volum .v_volum").click(function(){
 				$(this).siblings().find("span").css("left","0px");
-				$(this).css("background-position","-155px -13px")
+				$(this).css("background-position","-155px -13px");
 				myAudio.changeVolumeTo(0);
 			});
 			
